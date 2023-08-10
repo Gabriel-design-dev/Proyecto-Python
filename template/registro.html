@@ -1,0 +1,32 @@
+{% include("cabecera.html") %}
+
+<!-----FORMULARIO DE REGISTRO-->
+<div class="caja">
+    <form class="form-control" action="crear-registro" method="post">
+        <!---alertas-->
+          <!----------->
+        <h1 class="text-center t">Registro</h1>
+        {% if mensaje %}
+        <div class="alert alert-danger" role="alert">
+            {{ mensaje}}
+          </div>
+          {% endif %}
+  <div class="form-group ">
+    <label for="exampleInputEmail1 " class="t text-center">Correo</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su Correo " name="txtCorreo">
+    <small id="emailHelp" class="form-text text-muted"></small>
+  </div> <br>
+  <div class="form-group">
+    <label for="exampleInputPassword1 " class="t text-center">Contraseña</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese su Contraseña" name="txtPassword">
+  </div>
+  <div class="form-check">
+
+  </div>
+  <div class="text-center">
+  <button type="submit" class="btn btn-success">Registrar</button>
+</div>
+ 
+</form>
+
+<!-----FIN--------->
