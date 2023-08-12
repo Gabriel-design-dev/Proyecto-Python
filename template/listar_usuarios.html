@@ -1,0 +1,42 @@
+{% include("cabecera.html") %}
+
+<!------LISTA DE USUARIOS---->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+  .caja{
+      margin: 2%;
+      margin-left: 35%;
+      margin-right: 35%;
+  }
+  .t{
+    font-family: 'Lobster', cursive;
+  }
+  </style>
+
+{% if usuarios %}
+
+    <h1 class="text-center t">Lista de Usuarios</h1>
+<div class="caja">
+<table class="table table-striped">
+    <thead class="table-dark ">
+      <tr>
+        <th scope="col">Nº</th>
+        <th scope="col">Correo</th>
+        <th scope="col">Password</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for mostrar in usuarios %}
+      <tr>
+        <th scope="row"> {{mostrar.id}}</th>
+        <td> {{mostrar.correo}} </td>
+        <td>{{mostrar.password}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p>no hay datos</p>
+{% endif %}
+</div>
+<!-------------FIN-->
